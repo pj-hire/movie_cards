@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <title></title>
+  </head>
+  <body>
+    <div id="app">
+
+      <component-one
+        v-bind:genres="genres"
+        @change="add">
+      </component-one>
+
+      <hr>
+
+      <component-two
+        v-for="(movie, index) in movies"
+        v-bind:key="index"
+        v-bind:style="{ 'background-color': movie.backgroundColor }"
+        v-bind:movie-info="movie"
+        v-bind:index="index"
+        v-if="movie.watched !== true"
+        @change="remove">
+      </component-two>
+
+      <hr>
+
+      <component-three
+        v-for="(movie, index) in movies"
+        v-bind:key="index"
+        v-bind:style="{ 'background-color': movie.backgroundColor }"
+        v-bind:movie-info="movie"
+        v-bind:index="index"
+        v-if="movie.watched === true"
+        v-bind:class="{ favoriteClass: movie.favorite }"
+        @change="remove">
+      </component-three>
+
+    </div>
+  </body>
+  <script src="script.js" charset="utf-8"></script>
+</html>
+
+<!-- movie-info -->

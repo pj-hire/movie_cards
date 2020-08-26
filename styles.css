@@ -1,0 +1,24 @@
+.box {
+  border: solid 1px;
+  width: 400px;
+  padding: 10px;
+  text-align: center;
+  margin: auto;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.justify-right {
+  postion: absolute;
+  right: 0;
+}
+
+.favoriteClass {
+  border: solid 3px #7bf542;
+  width: 400px;
+  padding: 10px;
+  text-align: center;
+  margin: auto;
+  margin-bottom: 10px;
+  position: relative;
+}
